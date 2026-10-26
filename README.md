@@ -58,6 +58,12 @@ No account, no token, no license form: the model repo is public
 and not gated. The Gemma text-encoder weights ship inside that
 repo, so nothing is fetched from Google.
 
+### Install Python first
+If you don't already have Python 3.10 or newer, this is the one thing you install yourself — install.bat handles everything else.
+1. Download Python 3.10 from https://www.python.org/downloads/release/python-31022/ — pick the Windows installer (64-bit).
+2. Run it. On the first screen, tick "Add python.exe to PATH" at the bottom, then Install.
+3. Then continue with Install below.
+
 ## Install
 
 1. Extract this folder anywhere you like.
