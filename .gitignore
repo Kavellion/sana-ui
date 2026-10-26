@@ -1,0 +1,10 @@
+# Sana UI ignores
+# venv: built by install.bat, never shipped
+venv/
+# pictures: every run writes here, never shipped
+images_out/
+# Python bytecode
+__pycache__/
+*.pyc
+# release zips
+*.zip

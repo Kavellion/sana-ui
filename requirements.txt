@@ -1,0 +1,35 @@
+# Sana UI requirements
+#
+# torch is NOT listed here on purpose: install.bat installs it first
+# from PyTorch's CUDA index so GPU support works (same as Kandinsky UI).
+# Everything below installs from PyPI after that.
+#
+# The three version pins below are a matched set -- see the
+# PINNED TRIO note. Do not change one without re-checking the others.
+
+# PINNED TRIO -- change these three together, never one alone.
+# diffusers, transformers and gradio all depend on huggingface-hub,
+# and their hub ranges must overlap, or pip refuses (ResolutionImpossible).
+# This trio was verified end-to-end with pip's resolver (pip-compile)
+# for the Kandinsky UI build on this same PC, and is carried over
+# unchanged here because the versions are identical:
+#   diffusers 0.39.0 needs hub [0.34, 2.0)
+#   transformers 4.57.1 needs hub [0.34, 1.0) -- and needs only torch>=2.2,
+#     so it never calls torch.accelerator on the load path (the 5.x bug)
+#   gradio 5.39.0 needs hub [0.33.5, 1.0)
+# All three agree on huggingface-hub 0.36.2. Torch stays 2.5.1 (cu121):
+# accelerate only needs torch>=2.0, so pip reuses the installed torch.
+# All three pins run on Python 3.10 (diffusers 0.39 >=3.10,
+# transformers 4.57.1 >=3.9, gradio 5.39 >=3.10).
+# History: diffusers 0.42.0 needs Python>=3.11 (this PC is 3.10);
+# diffusers 0.41.0 needs hub>=1.32, which no transformers 4.x allows;
+# gradio 6.30.0 needs hub>=1.16, which no transformers 4.x allows.
+# SanaPipeline is present in diffusers 0.39.0 (verified against the
+# 0.39.0 wheel), so no bump is needed for Sana.
+
+diffusers==0.39.0
+transformers==4.57.1
+accelerate
+safetensors
+gradio==5.39.0
+pillow
