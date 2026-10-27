@@ -1,4 +1,14 @@
 # Sana UI
+Easiest install: grab the bundled zip from the Releases tab — no Python setup needed.
+
+![The app](ui-screenshot.png)
+
+The app
+
+![Example renders](example-porcelain-cyborg.jpg)
+![Example renders](example-cyborg-crown.jpg)
+
+Example renders
 
 **Sana 1.6B, without Jupyter and without Colab.**
 
