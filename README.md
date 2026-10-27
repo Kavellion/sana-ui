@@ -1,14 +1,4 @@
 # Sana UI
-Easiest install: grab the bundled zip from the Releases tab — no Python setup needed.
-
-![The app](ui-screenshot.png)
-
-The app
-
-![Example renders](example-porcelain-cyborg.jpg)
-![Example renders](example-cyborg-crown.jpg)
-
-Example renders
 
 **Sana 1.6B, without Jupyter and without Colab.**
 
@@ -17,6 +7,18 @@ different engine from Disco Diffusion and from Kandinsky, not a
 replacement for either. This is a plain app: run it, a page opens
 in your browser, type a prompt, pictures appear. Built the same
 way as Kandinsky UI, free forever.
+
+![Sana UI with a generated image](ui-screenshot.png)
+
+*The Sana UI running the bundled-Python build, with a generated image in it.*
+
+![Example render: porcelain cyborg with white blossoms](example-porcelain-cyborg.jpg)
+
+*Example render — porcelain cyborg, profile with white blossoms, 20 steps.*
+
+![Example render: cyborg crown portrait](example-cyborg-crown.jpg)
+
+*Example render — porcelain cyborg, front-facing crown portrait.*
 
 ## What it is
 
@@ -59,7 +61,7 @@ own tab; it did not fit the simple first version.)
 ## Requirements
 
 - Windows, an NVIDIA GPU (12 GB recommended), and a recent driver
-- Python 3.10 or newer, with "Add python.exe to PATH" ticked
+- Python: nothing to install -- Python 3.10 is included in this package, bundled in `python_embeded\`. Any Python you already have is left completely alone
 - Disk space: about 20 GB free. The app itself is small; the Sana
   model (about 10 GB of bf16 weights) downloads on first Generate
   into the Hugging Face cache, and your pictures live in `images_out/`
@@ -68,17 +70,11 @@ No account, no token, no license form: the model repo is public
 and not gated. The Gemma text-encoder weights ship inside that
 repo, so nothing is fetched from Google.
 
-### Install Python first
-If you don't already have Python 3.10 or newer, this is the one thing you install yourself — install.bat handles everything else.
-1. Download Python 3.10 from https://www.python.org/downloads/release/python-31022/ — pick the Windows installer (64-bit).
-2. Run it. On the first screen, tick "Add python.exe to PATH" at the bottom, then Install.
-3. Then continue with Install below.
-
 ## Install
 
-1. Extract this folder anywhere you like.
-2. Double-click `install.bat` and wait -- it builds a virtual
-   environment and installs PyTorch with CUDA plus the packages.
+1. Extract this folder anywhere you like. Python is included -- there is nothing to install first.
+2. Double-click `install.bat` and wait -- it sets up pip in the
+   bundled Python and installs PyTorch with CUDA plus the packages.
    Run it again if anything interrupts it; it resumes where it
    stopped.
 3. Double-click `run.bat`. A page opens in your browser. Type a
