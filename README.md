@@ -1,4 +1,14 @@
 # Sana UI
+Easiest install: grab the bundled zip from the Releases tab — no Python setup needed.
+
+![The app](ui-screenshot.png)
+
+The app
+
+![Example renders](example-porcelain-cyborg.jpg)
+![Example renders](example-cyborg-crown.jpg)
+
+Example renders
 
 **Sana 1.6B, without Jupyter and without Colab.**
 
@@ -7,18 +17,6 @@ different engine from Disco Diffusion and from Kandinsky, not a
 replacement for either. This is a plain app: run it, a page opens
 in your browser, type a prompt, pictures appear. Built the same
 way as Kandinsky UI, free forever.
-
-![Sana UI with a generated image](ui-screenshot.png)
-
-*The Sana UI running the bundled-Python build, with a generated image in it.*
-
-![Example render: porcelain cyborg with white blossoms](example-porcelain-cyborg.jpg)
-
-*Example render — porcelain cyborg, profile with white blossoms, 20 steps.*
-
-![Example render: cyborg crown portrait](example-cyborg-crown.jpg)
-
-*Example render — porcelain cyborg, front-facing crown portrait.*
 
 ## What it is
 
@@ -73,12 +71,8 @@ repo, so nothing is fetched from Google.
 ## Install
 
 1. Extract this folder anywhere you like. Python is included -- there is nothing to install first.
-2. Double-click `install.bat` and wait -- it sets up pip in the
-   bundled Python and installs PyTorch with CUDA plus the packages.
-   Run it again if anything interrupts it; it resumes where it
-   stopped.
-3. Double-click `run.bat`. A page opens in your browser. Type a
-   prompt and hit Generate.
+2. Double-click `install.bat` and wait -- it sets up pip in the bundled Python and installs PyTorch with CUDA plus the packages. Run it again if anything interrupts it; it resumes where it stopped.
+3. Double-click `run.bat`. A page opens in your browser. Type a prompt and hit Generate.
 
 ## First test
 
